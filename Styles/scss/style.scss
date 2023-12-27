@@ -1,0 +1,112 @@
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+@import "variable";
+@import "mixin";
+
+body {
+    background-image: url(../../Img/FondDePresentation.png );
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0;
+// height: 100vh;
+// width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.game_infos {
+    font-family: "SuperMario85";
+    color: $color8;
+    font-size: $font-large;
+    display: flex;
+    justify-content: space-between;
+    padding: 35px;
+}
+
+.name {}
+.temps {}
+
+.entree {
+    width: 180px;
+    margin-top: 460px;
+}
+
+.mario-container {
+    position: absolute;
+    top: 80%;
+    left: 30%;
+    // transform: translate(-50%, -50%);
+    will-change: transform;
+}
+
+.movable-div {
+    width: 80px;
+    height: 100px;
+}
+
+.cube {
+    width: 3.9%;
+    position: absolute;
+    bottom: 156px;
+    left: 1225px;
+    // left: 50px;
+}
+
+.nuage { 
+    width: 150px;
+    height: 100px;
+    position: absolute;
+    animation: nuageAnimation 80s linear infinite;
+}
+
+@keyframes nuageAnimation {
+    0% {
+        transform: translate(1000px, 50px);
+    }
+    25% {
+        transform: translate(500px, 300px);
+    }
+    50% {
+        transform: translate(1000px, 50px);
+    }
+    25% {
+        transform: translate(500px, 300px);
+    }
+    0% {
+        transform: translate(1000px, 50px);
+    }
+}
+
+.facing-left {
+    transform: scaleX(-1);
+}
+
+.facing-right {
+    transform: scaleX(1);
+}
+
+.hidden {
+    display: none;
+}
+
+.classlogo {
+    width: 130px;
+    height: 130px;
+    position: absolute; 
+    bottom: 280px;
+    left: 1200px;
+    animation: logoAnimation 1s forwards;
+}
+
+@keyframes logoAnimation {
+    0% {
+        transform: translateY(0); /* Position initiale - aucune translation verticale */
+    }
+    50% {
+        transform: translateY(-400px); /* Montée de 100px */
+    }
+    100% {
+        transform: translateY(0); /* Retour à la position initiale */
+    }
+}
