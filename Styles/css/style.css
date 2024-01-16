@@ -11860,7 +11860,7 @@ textarea.form-control-lg {
   src: url("../../FONT/SuperMario85.ttf");
 }
 body {
-  background-image: url(../../Img/FondDePresentation.png);
+  background-image: url(../../Img/FondDePresentation\ \(4\).png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -11881,12 +11881,12 @@ body {
 
 .entree {
   width: 180px;
-  margin-top: 460px;
+  margin-top: 410px;
 }
 
 .mario-container {
   position: absolute;
-  top: 80%;
+  top: 76%;
   left: 30%;
   will-change: transform;
 }
@@ -11896,11 +11896,47 @@ body {
   height: 100px;
 }
 
+.peach {
+  width: 90px;
+  height: 120px;
+  position: absolute;
+  top: 74%;
+  left: 5%;
+}
+
+.meteo {
+  width: 100px;
+  height: 110px;
+  position: absolute;
+  top: 12%;
+  right: 2%;
+}
+
+.monstre {
+  width: 70px;
+  height: 60px;
+  position: absolute;
+  top: 80%;
+  left: 72%;
+  animation: monstreAnimation 5s linear infinite;
+}
+
+@keyframes monstreAnimation {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(180px);
+    100% {
+      transform: translateX(0);
+    }
+  }
+}
 .cube {
   width: 3.9%;
   position: absolute;
-  bottom: 156px;
-  left: 1225px;
+  bottom: 190px;
+  left: 1150px;
 }
 
 .nuage {
@@ -11940,24 +11976,50 @@ body {
 }
 
 .classlogo {
-  width: 130px;
-  height: 130px;
+  width: 100px;
+  height: 100px;
   position: absolute;
-  bottom: 280px;
-  left: 1200px;
-  animation: logoAnimation 1s forwards;
+  bottom: 320px;
+  left: 1130px;
+  animation: logoAnimation 0.4s forwards;
 }
 
 @keyframes logoAnimation {
   0% {
-    transform: translateY(0); /* Position initiale - aucune translation verticale */
-  }
-  50% {
-    transform: translateY(-400px); /* Montée de 100px */
+    transform: translateY(0);
   }
   100% {
-    transform: translateY(0); /* Retour à la position initiale */
+    transform: translateY(-200px);
   }
+}
+@keyframes coinAnimation {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-150px) rotate(50deg);
+    opacity: 0;
+  }
+}
+.coin {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  background-image: url(/Img/piece.png);
+  background-size: cover;
+  animation: coinAnimation 1s ease-out;
+}
+
+#toggleButton {
+  border: none;
+  background: none;
+  color: white;
+  font-size: 60px;
+  font-family: "SuperMario85";
+  position: absolute;
+  bottom: 270px;
+  left: 340px;
 }
 
 /*# sourceMappingURL=style.css.map */
